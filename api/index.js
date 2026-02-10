@@ -5,7 +5,7 @@ export const config = {
 export default async function handler(req) {
   const url = new URL(req.url);
 
-  // --- ОБРАБОТКА GET ЗАПРОСА ---
+  // --- ОБРАБОТКА GET ЗАПРОСА --
   if (req.method === 'GET') {
     const domain = url.searchParams.get('domain');
 
@@ -86,4 +86,5 @@ export default async function handler(req) {
   }
 
   return new Response("Method not allowed", { status: 405 });
+
 }
